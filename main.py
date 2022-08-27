@@ -208,12 +208,12 @@ if __name__ == "__main__":
     day1=(spring-today1).days         #得到还有几天
     second=(spring-today1).seconds       #得到还有几秒
     sec=second%60               #根据秒数得到还有几秒
-    minute=second/60%60     #根据秒得到分钟数
-    hour=second/60/60            #根据秒数得到小时
-    if hour>24:
-    hour=hour-24    #如果超过24小时，就要算超过1天，所以要减去24
+    minute1=second/60%60     #根据秒得到分钟数
+    hour1=second/60/60            #根据秒数得到小时
+    if hour1>24:
+    hour1=hour1-24    #如果超过24小时，就要算超过1天，所以要减去24
     print "离今年春节还相差几天"
-    print "还有 %d 天 %d 小时 %d 分钟 %d 秒"  %(day,hour,minute,sec)
+    print "还有 %d 天 %d 小时 %d 分钟 %d 秒"  %(day1,hour1,minute1,sec)
     try:
         with open("config.txt", encoding="utf-8") as f:
             config = eval(f.read())
