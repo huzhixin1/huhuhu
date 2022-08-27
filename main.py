@@ -204,6 +204,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
  
  
 if __name__ == "__main__":
+    print("宇宙超级大美女妮妮，今天的你也是美美的，要开心哦！")
     try:
         with open("config.txt", encoding="utf-8") as f:
             config = eval(f.read())
