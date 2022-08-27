@@ -203,6 +203,17 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
  
  
 if __name__ == "__main__":
+    spring=datetime.datetime(2023,1,22,0,0,0)   #春节日期
+    today1=datetime.datetime.now()       #今天是几月几号
+    day1=(spring-today1).days         #得到还有几天
+    second=(spring-today1).seconds       #得到还有几秒
+    sec=second%60               #根据秒数得到还有几秒
+    minute=second/60%60     #根据秒得到分钟数
+    hour=second/60/60            #根据秒数得到小时
+    if hour>24:
+    hour=hour-24    #如果超过24小时，就要算超过1天，所以要减去24
+    print "离今年春节还相差几天"
+    print "还有 %d 天 %d 小时 %d 分钟 %d 秒"  %(day,hour,minute,sec)
     try:
         with open("config.txt", encoding="utf-8") as f:
             config = eval(f.read())
