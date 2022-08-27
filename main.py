@@ -211,7 +211,7 @@ if __name__ == "__main__":
     minute1=second/60%60     #根据秒得到分钟数
     hour1=second/60/60            #根据秒数得到小时
     if hour1>24:
-    hour1=hour1-24    #如果超过24小时，就要算超过1天，所以要减去24
+       hour1=hour1-24    #如果超过24小时，就要算超过1天，所以要减去24
     print "离今年春节还相差几天"
     print "还有 %d 天 %d 小时 %d 分钟 %d 秒"  %(day1,hour1,minute1,sec)
     try:
