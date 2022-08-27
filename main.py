@@ -4,7 +4,7 @@ from requests import get, post
 from datetime import datetime, date
 from zhdate import ZhDate
 import sys
-import datetime
+# import datetime
 import os
  
  
@@ -204,16 +204,16 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
  
  
 if __name__ == "__main__":
-    spring=datetime.datetime(2023,1,22,0,0,0)   #春节日期
-    today1=datetime.datetime.now()       #今天是几月几号
+    spring=datetime(2023,1,22)   #春节日期
+    today1=datetime.now()       #今天是几月几号
     day1=(spring-today1).days         #得到还有几天
-    second=(spring-today1).seconds       #得到还有几秒
-    sec=second%60               #根据秒数得到还有几秒
-    minute1=second/60%60     #根据秒得到分钟数
-    hour1=second/60/60            #根据秒数得到小时
-    if hour1>24:
-       hour1=hour1-24    #如果超过24小时，就要算超过1天，所以要减去24
-    print ("离今年春节还有 %d 天 %d 小时 %d 分钟 %d 秒") %(day1,hour1,minute1,sec)
+    #second=(spring-today1).seconds       #得到还有几秒
+    #sec=second%60               #根据秒数得到还有几秒
+   # minute1=second/60%60     #根据秒得到分钟数
+   # hour1=second/60/60            #根据秒数得到小时
+   # if hour1>24:
+     #  hour1=hour1-24    #如果超过24小时，就要算超过1天，所以要减去24
+    print ("离今年春节还有 %d 天") %(day1) #,hour1,minute1,sec)
     # print "还有 %d 天 %d 小时 %d 分钟 %d 秒"  %(day1,hour1,minute1,sec)
     try:
         with open("config.txt", encoding="utf-8") as f:
